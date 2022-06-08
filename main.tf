@@ -10,7 +10,7 @@ terraform {
     organization = "Suddhantar"
 
     workspaces {
-      name = "TFworkflows"
+      name = "gh-actions-demo"
     }
   }
 }
@@ -29,8 +29,8 @@ resource "snowflake_schema" "demo_schema" {
   comment  = "Schema for Snowflake Terraform demo"
 }
 
-resource "snowflake_schema" "demo_schem" {
+resource "snowflake_schema" "new_schema" {
   database = snowflake_database.demodb.name
-  name     = "DEMO_SCHEM"
+  name     = "NEW_SCHEMA"
   comment  = "Schem for Snowflake Terraform demo"
 }
